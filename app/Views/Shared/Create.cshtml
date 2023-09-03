@@ -3,35 +3,47 @@
 <h2>Create Movie</h2>
 
 <form method="post" action="Create" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <div class="coolinput">
-        <label for="Title" class="text">Title</label>
-        <input placeholder="Write film title..." type="text" name="Title" required class="input" />
+        <label asp-for="Title" class="text">Title</label>
+        <input asp-for="Title" placeholder="Write film title..." type="text" name="Title" class="input" />
+        <span asp-validation-for="Title" class="text-danger"></span>
     </div>
     <div class="coolinput">
-        <label for="Producer" class="text">Producer</label>
-        <input placeholder="Write film producer..." type="text" name="Producer" required class="input" />
+        <label asp-for="Producer" class="text">Producer</label>
+        <input asp-for="Producer" laceholder="Write film producer..." type="text" name="Producer" class="input" />
+        <span asp-validation-for="Producer" class="text-danger"></span>
     </div>
     <div class="coolinput">
-        <label for="Genre" class="text">Genre</label>
-        <input placeholder="Write film genre..." type="text" name="Genre" required class="input" />
+        <label asp-for="Genre" class="text">Genre</label>
+        <input asp-for="Genre" placeholder="Write film genre..." type="text" name="Genre" class="input" />
+        <span asp-validation-for="Genre" class="text-danger"></span>
     </div>
     <div class="coolinput">
-        <label for="Year" class="text">Year</label>
-        <input placeholder="Write film year..." type="number" name="Year" required class="input" />
+        <label asp-for="Year" class="text">Year</label>
+        <input asp-for="Year" placeholder="Write film year..." type="number" name="Year" class="input" />
+        <span asp-validation-for="Year" class="text-danger"></span>
     </div>
     <div class="starsinput">
-        <label for="Stars">Stars</label>
-        <input class="stars" type="range" max="5" min="1" value="1" name="Stars" required />
+        <label asp-for="Stars">Stars</label>
+        <input asp-for="Stars" class="stars" type="range" max="5" min="1" value="1" name="Stars" />
+        <span asp-validation-for="Stars" class="text-danger"></span>
     </div>
     <div class="coolinput">
-        <label class="text" for="Description">Description</label>
-        <textarea class="input" name="Description" required></textarea>
+        <label class="text" asp-for="Description">Description</label>
+        <textarea asp-for="Description" class="input" name="Description"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
     </div>
     <div class="imageinput">
         <label for="ImageFile">Image</label>
-        <input accept="image/png, image/jpeg, image/gif, image/webp" type="file" name="ImageFile" required />
+        <input asp-for="ImageName" accept="image/png, image/jpeg, image/gif, image/webp" type="file" name="ImageFile" />
+        <span asp-validation-for="ImageName" class="text-danger"></span>
     </div>
     <div>
         <input class="createbutton" type="submit" value="Create" />
     </div>
 </form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

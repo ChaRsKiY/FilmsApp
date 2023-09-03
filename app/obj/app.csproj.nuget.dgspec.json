@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/charskiy/Projects/app/app/app.csproj": {}
+    "/Users/charskiy/Projects/FilmsApp/app/app.csproj": {}
   },
   "projects": {
-    "/Users/charskiy/Projects/app/app/app.csproj": {
+    "/Users/charskiy/Projects/FilmsApp/app/app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/charskiy/Projects/app/app/app.csproj",
+        "projectUniqueName": "/Users/charskiy/Projects/FilmsApp/app/app.csproj",
         "projectName": "app",
-        "projectPath": "/Users/charskiy/Projects/app/app/app.csproj",
+        "projectPath": "/Users/charskiy/Projects/FilmsApp/app/app.csproj",
         "packagesPath": "/Users/charskiy/.nuget/packages/",
-        "outputPath": "/Users/charskiy/Projects/app/app/obj/",
+        "outputPath": "/Users/charskiy/Projects/FilmsApp/app/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/charskiy/.nuget/NuGet/NuGet.Config"

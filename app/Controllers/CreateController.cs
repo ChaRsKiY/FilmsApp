@@ -22,9 +22,12 @@ public class CreateController : Controller
     }
 
     [HttpPost]
-    public IActionResult Create(Movie movie, IFormFile imageFile)
+    public IActionResult Create([Bind("Title,Producer,Genre,Year,Stars,Description")] Movie movie, IFormFile imageFile)
     {
-        if (imageFile != null)
+        if(imageFile == null)
+            ModelState.AddModelError("ImageName", "Постер не установлен");
+
+        if (ModelState.IsValid)
         {
             string fileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
             string filePath = Path.Combine("wwwroot/movies", fileName);
@@ -33,9 +36,10 @@ public class CreateController : Controller
                 imageFile.CopyTo(fileStream);
             }
             movie.ImageName = fileName;
+            _movieCollection.InsertOne(movie);
+            return RedirectToAction("Index", "Home");
         }
 
-        _movieCollection.InsertOne(movie);
-        return RedirectToAction("Index", "Home");
+        return View(movie);
     }
 }

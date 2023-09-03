@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ywTQ5EI1gS02B0VYSRJVGVq5IjN1QxoqmliCE8YTthUrPsz/r3QWq/+38mYxXlu6HpVb8SZybRhUu5sq5F519w==",
+  "dgSpecHash": "BFlkFjpWwfvZbYBs/fFfTP+xpYM0i8TF/agHmhc8EORTXqZpH6FNXL31NckATESIKIfc0yCu8xnmlhb5r/F4SA==",
   "success": true,
-  "projectFilePath": "/Users/charskiy/Projects/app/app/app.csproj",
+  "projectFilePath": "/Users/charskiy/Projects/FilmsApp/app/app.csproj",
   "expectedPackageFiles": [
     "/Users/charskiy/.nuget/packages/awssdk.core/3.7.100.14/awssdk.core.3.7.100.14.nupkg.sha512",
     "/Users/charskiy/.nuget/packages/awssdk.securitytoken/3.7.100.14/awssdk.securitytoken.3.7.100.14.nupkg.sha512",
